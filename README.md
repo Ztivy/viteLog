@@ -18,6 +18,8 @@ If you are developing a production application, we recommend using TypeScript wi
 [!NOTE]
 Todo es local, el usuario se guarda en el local storage 
 > [!NOTE]
->Se ejecuta con npm run dev 
+>Se ejecuta con npm run dev
+
+
 > [!WARNING]
 > se debe de instalar react router dom npm install react-router-dom

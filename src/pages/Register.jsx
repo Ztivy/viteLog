@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+//import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
+import { Link, useNavigate, Navigate } from 'react-router-dom'
 
 export default function Register() {
   const { register, isAuthenticated } = useAuth()
@@ -16,10 +17,14 @@ export default function Register() {
   const [success, setSuccess] = useState('')
   const [loading, setLoading] = useState(false)
 
-  if (isAuthenticated) {
+  /*if (isAuthenticated) {
     navigate('/dashboard', { replace: true })
     return null
-  }
+  }*/
+
+    if (isAuthenticated) {
+  return <Navigate to="/dashboard" replace />
+}
 
   const handleChange = (e) => {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
